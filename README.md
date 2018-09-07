@@ -37,6 +37,12 @@ e.g. https://dzone.com/articles/java-9-modules-part-2-intellij-and-maven
 ### [Financial Information eXchange (FIX)](https://en.wikipedia.org/wiki/Financial_Information_eXchange)
 e.g.https://en.wikipedia.org/wiki/Financial_Information_eXchange 
 
+### [New Module Wizard IntelliJ](https://www.jetbrains.com/help/idea/add-module-wizard.html)
+e.g.https://www.jetbrains.com/help/idea/add-module-wizard.html
+
+### [New Module Wizard IntelliJ](https://www.jetbrains.com/help/idea/add-module-wizard.html)
+e.g.https://www.jetbrains.com/help/idea/add-module-wizard.html
+
 ### Links  
 *  https://docs.oracle.com/javase/7/docs/api/java/io/BufferedReader.html  
 *   https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html  
