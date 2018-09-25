@@ -8,11 +8,18 @@ To compile in cmd
    -> mvn clean package 
 From the root directory   
 
-##  Run
+## Run
 To run modules in cmd  
 * Run:  
-   ->  
+   ->  java -jar ./Router/target/router.jar  
+   ->  java -jar ./Market/target/market.jar   
+   ->  java -jar ./Broker/target/broker.jar  
 From the root directory 
+
+## Checks
+Check Ports
+* To check the ports Run:  
+    -> lsof -Pn -i4
 
 ## References
 
@@ -46,24 +53,28 @@ e.g.https://www.jetbrains.com/help/idea/add-module-wizard.html
 ### [Java Network Tutorial - Java Asynchronous Socket Channels](http://www.java2s.com/Tutorials/Java/Java_Network/0080__Java_Network_Asynchronous_Socket_Channels.htm)
 e.g.http://www.java2s.com/Tutorials/Java/Java_Network/0080__Java_Network_Asynchronous_Socket_Channels.htm
 
+### [Tutorials Point - Chain of Responsibility Pattern](https://www.tutorialspoint.com/design_pattern/chain_of_responsibility_pattern.htm)
+e.g.https://www.tutorialspoint.com/design_pattern/chain_of_responsibility_pattern.htm
+
 ### Links  
-*  https://docs.oracle.com/javase/7/docs/api/java/io/BufferedReader.html  
-*   https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html  
-*   https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html  
-*   http://www.java2s.com/Code/JavaAPI/java.util/foreachloopforArrayList.htm  
-*   https://www.geeksforgeeks.org/arrays-in-java/  
-*   https://www.tutorialspoint.com/java/java_strings.htm  
-*   https://www.tutorialspoint.com/java/java_inheritance.htm  
-*   https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html
-*   https://en.wikipedia.org/wiki/Class_diagram  
-*   https://www.youtube.com/watch?v=wiQdrH2YpT4 Observer Design Pattern  
-*   https://www.youtube.com/watch?v=ohL2HIBK1pg Observer Design Pattern  
-*   https://www.youtube.com/watch?v=ub0DXaeV6hA&t=4s Factory Design Pattern  
-*   https://www.youtube.com/watch?v=xbjAsdAK4xQ Abstract Factory Design Pattern  
-*   https://www.jetbrains.com/help/idea/creating-form-initialization-code.html
-*   http://glxn.net/2010/08/17/making-a-swing-project-using-intellij-idea-and-gui-builder-with-maven-including-executable-jar  
-*    https://en.wikipedia.org/wiki/Financial_Information_eXchange  
-* https://dzone.com/articles/java-9-modules-part-2-intellij-and-maven 
+* https://docs.oracle.com/javase/7/docs/api/java/io/BufferedReader.html  
+* https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html  
+* https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html  
+* http://www.java2s.com/Code/JavaAPI/java.util/foreachloopforArrayList.htm  
+* https://www.geeksforgeeks.org/arrays-in-java/  
+* https://www.tutorialspoint.com/java/java_strings.htm  
+* https://www.tutorialspoint.com/java/java_inheritance.htm  
+* https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html
+* https://en.wikipedia.org/wiki/Class_diagram  
+* https://www.youtube.com/watch?v=wiQdrH2YpT4 Observer Design Pattern  
+* https://www.youtube.com/watch?v=ohL2HIBK1pg Observer Design Pattern  
+* https://www.youtube.com/watch?v=ub0DXaeV6hA&t=4s Factory Design Pattern  
+* https://www.youtube.com/watch?v=xbjAsdAK4xQ Abstract Factory Design Pattern  
+* https://www.jetbrains.com/help/idea/creating-form-initialization-code.html
+* http://glxn.net/2010/08/17/making-a-swing-project-using-intellij-idea-and-gui-builder-with-maven-including-executable-jar  
+* https://en.wikipedia.org/wiki/Financial_Information_eXchange  
+* https://dzone.com/articles/java-9-modules-part-2-intellij-and-maven
+* https://www.tutorialspoint.com/design_pattern/chain_of_responsibility_pattern.htm
 
 ## Mandatory part  
 You need to implement a simulation tools for the financial markets that exchange a simplified version of FIX messages. The tools will be able to communicate over a network using the TCP protocol. The focus in this project are not the trading algos. 
