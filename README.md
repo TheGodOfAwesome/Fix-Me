@@ -19,7 +19,9 @@ From the root directory
 ## Checks
 Check Ports
 * To check the ports Run:  
-    -> lsof -Pn -i4
+    -> lsof -Pn -i4  
+    -> lsof -i :5000  
+    -> lsof -i :5001  
 
 ## References
 
