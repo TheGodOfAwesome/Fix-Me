@@ -25,10 +25,8 @@ public class RouterServerController implements Runnable {
             AsynchronousServerSocketChannel server = AsynchronousServerSocketChannel.open();
                 InetSocketAddress sAddr = new InetSocketAddress(host, port);
             server.bind(sAddr);
-            // getAddress() method
-            System.out.println("Inet Address : " + sAddr.getAddress());
-            // getPort() method
-            System.out.println("Inet Port : " + sAddr.getPort());
+            // getAddress() & getPort()
+            System.out.println("Inet Address: " + sAddr.getAddress() + " Inet Port: " + sAddr.getPort());
             if (port % 2 == 0)
                 System.out.format("Broker Server is listening at %s%n", sAddr);
             else

@@ -13,8 +13,6 @@ import java.nio.charset.Charset;
 
 public class SocketServerHandler {
 
-
-
     public static class Attachment {
         public AsynchronousServerSocketChannel server;
         public int clientId;
@@ -116,15 +114,9 @@ public class SocketServerHandler {
                 if (attach.client.isOpen() && RouterController.getSize() > 1)
                 {
                     new CheckSum().performAction(attach, IType.CHECKSUM);
-                    //attach.client.write(attach.buffer, attach, this);
                 }
-                /*attach.buffer.put(bytes);
-                attach.client.write(attach.buffer, attach, this);*/
 
             } else {
-                // Write to the client
-                //System.out.println("Hello");
-                //attach.client.write(attach.buffer, attach, this);
                 attach.isRead = true;
                 attach.buffer.clear();
                 attach.client.read(attach.buffer, attach, this);
