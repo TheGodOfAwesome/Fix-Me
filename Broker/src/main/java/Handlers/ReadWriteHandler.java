@@ -28,10 +28,16 @@ public class ReadWriteHandler implements CompletionHandler<Integer, Attachment> 
                 System.out.println("Server Responded: " + msg.replace((char) 1, '|'));
             try {
                 boolean s = BrokerController.proccessReply(msg);
-                if (s == true && BrokerController.bs == 1)
-                    BrokerController.updateData(true);
                 if (s == true && BrokerController.bs == 0)
-                    BrokerController.updateData(false);
+                    BrokerController.updateData(false, BrokerController.bs);
+                if (s == true && BrokerController.bs == 1)
+                    BrokerController.updateData(true, BrokerController.bs);
+                /*
+                if (s == true && BrokerController.bs == 2)
+                    BrokerController.updateData(true, BrokerController.bs);
+                if (s == true && BrokerController.bs == 3)
+                    BrokerController.updateData(true, BrokerController.bs);
+                */
             } catch (Exception e) {
                 e.printStackTrace();
             }

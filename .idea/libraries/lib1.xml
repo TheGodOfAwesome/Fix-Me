@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Router/target/lib/slf4j-simple-1.7.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Router/target/lib/lombok-1.12.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Router/target/lib/validation-api-1.1.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Router/target/lib/hibernate-validator-4.1.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Router/target/lib/slf4j-api-1.7.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Router/target/lib/hibernate-validator-annotation-processor-4.1.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

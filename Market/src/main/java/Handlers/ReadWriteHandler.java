@@ -33,7 +33,6 @@ public class ReadWriteHandler implements CompletionHandler<Integer, Attachment> 
             } else
                 System.out.println("Server Responded: " + msg.replace((char) 1, '|'));
 
-
             attach.buffer.clear();
             msg = MarketController.processRequest(msg);
             if (msg.contains("bye")) {

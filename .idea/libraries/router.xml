@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="router">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Router/target/router.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

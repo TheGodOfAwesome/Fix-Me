@@ -1,4 +1,4 @@
-Controllers\BrokerController.class
+Handlers/ReadWriteHandler.class
 Broker.class
-Models\Attachment.class
-Handlers\ReadWriteHandler.class
+Controllers/BrokerController.class
+Models/Attachment.class

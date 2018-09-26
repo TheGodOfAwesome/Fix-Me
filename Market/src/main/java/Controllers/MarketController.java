@@ -18,6 +18,7 @@ public class MarketController {
     private static int dstId;
     private static final String fixv = "8=FIX.4.2";
     private static Attachment attach;
+
     public MarketController(int _qty, int _pr)
     {
         qty = _qty;
@@ -45,12 +46,6 @@ public class MarketController {
         attach.buffer = ByteBuffer.allocate(2048);
         attach.isRead = true;
         attach.mainThread = Thread.currentThread();
-
-        /*Charset cs = Charset.forName("UTF-8");
-        String msg = "Hello";
-        byte[] data = msg.getBytes(cs);
-        attach.buffer.put(data);
-        attach.buffer.flip();*/
 
         ReadWriteHandler readWriteHandler = new ReadWriteHandler();
         channel.read(attach.buffer, attach, readWriteHandler);

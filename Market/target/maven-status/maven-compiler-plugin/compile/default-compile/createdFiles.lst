@@ -1,4 +1,4 @@
-Controllers\MarketController.class
+Handlers/ReadWriteHandler.class
 Market.class
-Models\Attachment.class
-Handlers\ReadWriteHandler.class
+Controllers/MarketController.class
+Models/Attachment.class

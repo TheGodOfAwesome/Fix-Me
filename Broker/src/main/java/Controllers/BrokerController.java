@@ -22,6 +22,7 @@ public class BrokerController {
         dstId = id;
         bs = by;
     }
+
     public void contact() throws Exception
     {
         AsynchronousSocketChannel channel = AsynchronousSocketChannel.open();
@@ -35,12 +36,6 @@ public class BrokerController {
         attach.isRead = true;
 
         attach.mainThread = Thread.currentThread();
-
-        /*Charset cs = Charset.forName("UTF-8");
-        String msg = "Hello";
-        byte[] data = msg.getBytes(cs);
-        attach.buffer.put(data);
-        attach.buffer.flip();*/
 
         ReadWriteHandler readWriteHandler = new ReadWriteHandler();
         channel.read(attach.buffer, attach, readWriteHandler);
@@ -57,23 +52,25 @@ public class BrokerController {
     public static String sellProduct(int dst)
     {
         String soh = "" + (char)1;
-        String msg = "id="+attach.clientId+soh+fixv+soh+"35=D"+soh+"54=2"+soh+"38=2"+soh+"44=55"+soh+"55=WTCSOCKS"+soh;
+        String msg = "id="+attach.clientId+soh+fixv+soh+"35=D"+soh+"54=2"+soh+"38=2"+soh+"44=55"+soh+"55=WTCSTOCKS"+soh;
         msg += "50="+attach.clientId+soh+"49="+attach.clientId+soh+"56="+dst+soh;
         if (qty > 0)
             return msg;
         else
             return "bye";
     }
+
     public static String buyProduct(int dst)
     {
         String soh = "" + (char)1;
-        String msg = "id="+attach.clientId+soh+fixv+soh+"35=D"+soh+"54=1"+soh+"38=2"+soh+"44=90"+soh+"55=WTCSHIRTS"+soh;
+        String msg = "id="+attach.clientId+soh+fixv+soh+"35=D"+soh+"54=1"+soh+"38=2"+soh+"44=90"+soh+"55=WTCBONDS"+soh;
         msg += "50="+attach.clientId+soh+"49="+attach.clientId+soh+"56="+dst+soh;
         if (cash > 0)
             return msg;
         else
             return "bye";
     }
+
     public static boolean proccessReply(String reply)
     {
         String data[] = reply.split(""+(char)1);
@@ -98,7 +95,8 @@ public class BrokerController {
         }
         return false;
     }
-    public static void updateData(boolean state)
+
+    public static void updateData(boolean state, int condition)
     {
         if (state == false)
         {
