@@ -71,6 +71,8 @@ public class ReadWriteHandler implements CompletionHandler<Integer, Attachment> 
 
         if (BrokerController.bs == 1)
             msg = BrokerController.buyProduct(BrokerController.dstId);
+        else if (BrokerController.bs == 2)
+            msg = BrokerController.sellAbsurdProduct(BrokerController.dstId);
         else
             msg = BrokerController.sellProduct(BrokerController.dstId);
         return msg + getCheckSum(msg);

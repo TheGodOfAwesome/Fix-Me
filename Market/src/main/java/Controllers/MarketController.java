@@ -80,6 +80,7 @@ public class MarketController {
                 dstId = Integer.parseInt(dat.split("=")[1]);
         }
 
+        //System.out.println("Request:\n Message Type -> " + msgType + "\nRequest Type -> " + reqType + "\nPrice -> " + price + "\nQuantity ->" + quant);
         return process(msgType, reqType, price, quant);
     }
 
@@ -91,6 +92,8 @@ public class MarketController {
             return getMessage(3, Integer.parseInt(quant)); //buy from broker
         else if (msgType.equals("D") && reqType.equals("1") && p >= price && qty - q >= 0 && (req == 2 || req == 3))
             return getMessage(2, Integer.parseInt(quant)); //sell to broker
+        else if (p >= 100)
+            return getMessage(4, Integer.parseInt(quant)); //sell to broker
         else
             return getMessage(1, Integer.parseInt(quant)); //reject broker request
     }
@@ -100,7 +103,7 @@ public class MarketController {
         String soh = "" + (char)1;
         String msg = "";
         if (code == 1)
-            msg = "id="+attach.clientId+soh+fixv+soh+"35=8"+soh+"39=8"+soh+"50="+attach.clientId+soh+"49="+attach.clientId+soh+"56="+dstId+soh;
+            msg = "id="+attach.clientId+soh+fixv+soh+"35=8"+soh+"39=2"+soh+"50="+attach.clientId+soh+"49="+attach.clientId+soh+"56="+dstId+soh;
         if (code == 2)
         {
             msg = "id="+attach.clientId+soh+fixv+soh+"35=8"+soh+"39=2"+soh+"50="+attach.clientId+soh+"49="+attach.clientId+soh+"56="+dstId+soh;
@@ -109,6 +112,11 @@ public class MarketController {
         if (code == 3)
         {
             msg = "id="+attach.clientId+soh+fixv+soh+"35=8"+soh+"39=2"+soh+"50="+attach.clientId+soh+"49="+attach.clientId+soh+"56="+dstId+soh;
+            qty += quant;
+        }
+        if (code == 4)
+        {
+            msg = "id="+attach.clientId+soh+fixv+soh+"35=8"+soh+"39=8"+soh+"50="+attach.clientId+soh+"49="+attach.clientId+soh+"56="+dstId+soh;
             qty += quant;
         }
         return msg + getCheckSum(msg);

@@ -60,6 +60,17 @@ public class BrokerController {
             return "bye";
     }
 
+    public static String sellAbsurdProduct(int dst)
+    {
+        String soh = "" + (char)1;
+        String msg = "id="+attach.clientId+soh+fixv+soh+"35=D"+soh+"54=2"+soh+"38=2"+soh+"44=1000"+soh+"55=WTCSTOCKS"+soh;
+        msg += "50="+attach.clientId+soh+"49="+attach.clientId+soh+"56="+dst+soh;
+        if (qty > 0)
+            return msg;
+        else
+            return "bye";
+    }
+
     public static String buyProduct(int dst)
     {
         String soh = "" + (char)1;

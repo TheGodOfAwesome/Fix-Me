@@ -22,10 +22,10 @@ public class Broker {
                 Trade(Integer.parseInt(args[0]), 1);
                 break;
             } else if (input.equalsIgnoreCase("Sell") || input.equalsIgnoreCase("S")) {
-                Trade(Integer.parseInt(args[0]), 2);
+                Trade(Integer.parseInt(args[0]), 4);
                 break;
             } else if (input.equalsIgnoreCase("Crazy") || input.equalsIgnoreCase("C")) {
-                Trade(Integer.parseInt(args[0]), 3);
+                Trade(Integer.parseInt(args[0]), 2);
                 break;
             } else
                 System.out.println(input + " is an invalid command\n" + help + "Continue...");
